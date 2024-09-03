@@ -1,0 +1,43 @@
+* {
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+a,
+li {
+  text-decoration: none;
+  list-style: none;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  /* buatkan set warna grayscale */
+  --gray-1: #f6f6f6;
+  --gray-2: #ddd;
+  --gray-3: #999;
+  --gray-4: #666;
+  --gray-5: #333;
+
+  /* buatkan set warna primary warna oranye, buat yang lebih muda*/
+
+  --orange-1: #ffeecc;
+  --orange-2: #ffb74c;
+  --orange-3: #ff9900;
+  --orange-4: #ff6600;
+  --orange-5: #ff3300;
+  --orange-6: #ff0000;
+
+  /* buat set warna biru */
+
+  --blue-1: #3366ad;
+}
+
+.side-container {
+  top: 0;
+  max-height: 100vh;
+}
+.dashb-content {
+}

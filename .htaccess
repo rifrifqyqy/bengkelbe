@@ -1,0 +1,7 @@
+RewriteEngine On 
+RewriteBase /bengkelbe/
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([a-zA-Z0-9]+)$ index.php?page=$1 [L,QSA]
+RewriteRule ^produk/([0-9]+)$ index.php?page=produk&id=$1 [L,QSA]
