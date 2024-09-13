@@ -2,9 +2,18 @@
 // Menginclude file config.php untuk koneksi database
 include 'services/config.php';
 
-// Mengatur header agar API dapat diakses dari berbagai domain (CORS) dan mengembalikan JSON
+// Mengatur header agar API dapat diakses dari berbagai domain (CORS)
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
+
+// Menangani preflight request
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
+    header("Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With");
+    header("Access-Control-Max-Age: 3600");
+    http_response_code(204);
+    exit;
+}
 
 // Query untuk mendapatkan semua data produk beserta informasi gambarnya
 $sql = "SELECT p.id, p.produk_name, p.description, p.price, p.created_at, i.file_name, i.file_path 

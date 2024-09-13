@@ -1,0 +1,19 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "api/index.php",
+        "use": "@vercel/php"
+      }
+    ],
+    "rewrites": [
+      { "source": "/", "destination": "/api/index.php" },
+      { "source": "/home", "destination": "/api/index.php?page=home" },
+      { "source": "/costume", "destination": "/api/index.php?page=costume" },
+      { "source": "/costume/:id/checkout", "destination": "/api/index.php?page=costume&id=:id&action=checkout" },
+      { "source": "/tambahproduk", "destination": "/api/index.php?page=tambahproduk" },
+      { "source": "/daftarproduk", "destination": "/api/index.php?page=daftarproduk" },
+      { "source": "/dataproduk", "destination": "/api/index.php?page=dataproduk" }
+    ]
+  }
+  
